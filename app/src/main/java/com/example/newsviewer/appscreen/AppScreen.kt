@@ -1,9 +1,8 @@
-package com.example.newsviewer.navigation
+package com.example.newsviewer.appscreen
 
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
-import androidx.compose.ui.graphics.Color
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -11,7 +10,6 @@ import androidx.navigation.compose.rememberNavController
 import com.example.newsviewer.Account
 import com.example.newsviewer.Help
 import com.example.newsviewer.Home
-import com.example.newsviewer.composables.Drawer
 import kotlinx.coroutines.launch
 
 @Composable

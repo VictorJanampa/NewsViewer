@@ -1,4 +1,4 @@
-package com.example.newsviewer.navigation
+package com.example.newsviewer.appscreen
 
 sealed class Screen (val title: String, val route: String) {
     object Home : Screen("Home", "home")

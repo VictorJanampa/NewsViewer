@@ -1,4 +1,4 @@
-package com.example.newsviewer.composables
+package com.example.newsviewer.appscreen
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
@@ -11,7 +11,6 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.newsviewer.R
-import com.example.newsviewer.navigation.screens
 import com.example.newsviewer.ui.theme.NewsViewerTheme
 
 @Composable

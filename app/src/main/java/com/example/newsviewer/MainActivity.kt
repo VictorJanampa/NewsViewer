@@ -1,7 +1,6 @@
 package com.example.newsviewer
 
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
@@ -18,10 +17,9 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.newsviewer.navigation.AppScreen
-import com.example.newsviewer.tabviews.TabScreenOne
-import com.example.newsviewer.tabviews.TabScreenThree
-import com.example.newsviewer.tabviews.TabScreenTwo
+import com.example.newsviewer.appscreen.AppScreen
+import com.example.newsviewer.appscreen.tabviews.TabScreenOne
+import com.example.newsviewer.appscreen.tabviews.TabScreenTwo
 import com.example.newsviewer.ui.theme.NewsViewerTheme
 import com.example.newsviewer.ui.theme.TabColorOne
 import com.google.accompanist.pager.*
@@ -162,11 +160,10 @@ fun TabScreen() {
 @OptIn(ExperimentalPagerApi::class)
 @Composable
 fun TabsContent(pagerState: PagerState) {
-    HorizontalPager(state = pagerState, count = 3) { page ->
+    HorizontalPager(state = pagerState, count = 2) { page ->
         when (page){
             0 -> TabScreenOne("tab 0")
             1 -> TabScreenTwo("tab 1")
-            2 -> TabScreenThree("tab 2")
         }
     }
 }
@@ -174,10 +171,9 @@ fun TabsContent(pagerState: PagerState) {
 @OptIn(ExperimentalPagerApi::class)
 @Composable
 fun Tabs(pagerState: PagerState) {
-    val nameList = listOf("Home", "Market","Emails")
+    val nameList = listOf("Home","Emails")
     val iconList = listOf(
         Icons.Filled.Home,
-        Icons.Filled.ShoppingCart,
         Icons.Filled.Email
     )
     val scope = rememberCoroutineScope()

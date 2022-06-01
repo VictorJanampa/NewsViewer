@@ -1,4 +1,4 @@
-package com.example.newsviewer.tabviews
+package com.example.newsviewer.appscreen.tabviews
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -30,22 +30,6 @@ fun TabScreenOne(title: String) {
 
 @Composable
 fun TabScreenTwo(title: String) {
-    Column(
-        modifier = Modifier.fillMaxSize(),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
-    ) {
-        Text(
-            text = title,
-            style = MaterialTheme.typography.h3,
-            color = TabColorOne,
-            fontStyle = FontStyle.Italic
-        )
-    }
-}
-
-@Composable
-fun TabScreenThree(title: String) {
     Column(
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
